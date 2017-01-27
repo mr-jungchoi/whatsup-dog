@@ -129,6 +129,9 @@
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="dogs" row="id" />
 </row>
+<row name="accepted" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default></row>
 <row name="park_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="parks" row="id" />
