@@ -118,6 +118,9 @@
 <row name="id" null="1" autoincrement="1">
 <datatype>INTEGER</datatype>
 <default>NULL</default></row>
+<row name="scheduled_time" null="1" autoincrement="0">
+<datatype>DATETIME</datatype>
+<default>NULL</default></row>
 <row name="dog_id" null="1" autoincrement="0">
 <datatype>INTEGER</datatype>
 <default>NULL</default><relation table="dogs" row="id" />
