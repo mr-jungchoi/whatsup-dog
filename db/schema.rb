@@ -58,13 +58,13 @@ ActiveRecord::Schema.define(version: 20170126042424) do
   end
 
   create_table "walks", force: :cascade do |t|
-    t.datetime "scheduled_date"
-    t.integer  "dog_id"
-    t.integer  "other_dog_id"
+    t.datetime "scheduled_time"
+    t.integer  "requesting_dog_id"
+    t.integer  "requested_dog_id"
     t.integer  "park_id"
-    t.index ["dog_id"], name: "index_walks_on_dog_id", using: :btree
-    t.index ["other_dog_id"], name: "index_walks_on_other_dog_id", using: :btree
     t.index ["park_id"], name: "index_walks_on_park_id", using: :btree
+    t.index ["requested_dog_id"], name: "index_walks_on_requested_dog_id", using: :btree
+    t.index ["requesting_dog_id"], name: "index_walks_on_requesting_dog_id", using: :btree
   end
 
   add_foreign_key "dogs", "users"
